@@ -3,10 +3,9 @@ package com.phone.contacts.service.impl;
 import com.phone.contacts.dto.ContactDto;
 import com.phone.contacts.repository.CustomerRepository;
 import com.phone.contacts.service.ContactsService;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class ContactsServiceImpl implements ContactsService {
@@ -18,9 +17,8 @@ public class ContactsServiceImpl implements ContactsService {
     }
 
     @Override
-    public List<ContactDto> getCustomerContacts(Pageable pageable) {
+    public Page<ContactDto> getCustomerContacts(Pageable pageable) {
         return customerRepository.findAll(pageable)
-                .map(customer -> new ContactDto(customer.getName(),customer.getPhone()))
-                .toList();
+                .map(customer -> new ContactDto(customer.getName(),customer.getPhone()));
     }
 }
