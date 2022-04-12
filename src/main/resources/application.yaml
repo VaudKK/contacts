@@ -1,0 +1,9 @@
+server:
+  port: 9000
+
+sqlite:
+  driverClassName: org.sqlite.JDBC
+  url: jdbc:sqlite:sampledb
+  hibernate:
+    dialect: com.phone.contacts.config.sqlite.SqliteDialect
+    show_sql: true
