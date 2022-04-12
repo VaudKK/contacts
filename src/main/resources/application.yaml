@@ -3,7 +3,7 @@ server:
 
 sqlite:
   driverClassName: org.sqlite.JDBC
-  url: jdbc:sqlite:sampledb
+  url: jdbc:sqlite:sample.db
   hibernate:
-    dialect: com.phone.contacts.config.sqlite.SqliteDialect
+    dialect: com.phone.contacts.config.sqlite.SQLiteDialect
     show_sql: true

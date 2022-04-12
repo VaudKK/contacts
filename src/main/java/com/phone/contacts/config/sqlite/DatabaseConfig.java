@@ -44,10 +44,10 @@ public class DatabaseConfig {
     final Properties additionalProperties() {
         final Properties hibernateProperties = new Properties();
         if (environment.getProperty("sqlite.hibernate.dialect") != null) {
-            hibernateProperties.setProperty("sqlite.hibernate.dialect", environment.getProperty("sqlite.hibernate.dialect"));
+            hibernateProperties.setProperty("hibernate.dialect", environment.getProperty("sqlite.hibernate.dialect"));
         }
         if (environment.getProperty("sqlite.hibernate.show_sql") != null) {
-            hibernateProperties.setProperty("sqlite.hibernate.show_sql", environment.getProperty("sqlite.hibernate.show_sql"));
+            hibernateProperties.setProperty("hibernate.show_sql", environment.getProperty("sqlite.hibernate.show_sql"));
         }
         return hibernateProperties;
     }

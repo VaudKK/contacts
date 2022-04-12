@@ -6,12 +6,12 @@ import org.hibernate.dialect.identity.IdentityColumnSupport;
 import java.sql.Types;
 
 
-public class SqliteDialect extends Dialect {
+public class SQLiteDialect extends Dialect {
 
     /**
      * Register sqlite data types
      */
-    public SqliteDialect(){
+    public SQLiteDialect(){
         registerColumnType(Types.INTEGER,"integer");
         registerColumnType(Types.VARCHAR,"varchar");
     }
