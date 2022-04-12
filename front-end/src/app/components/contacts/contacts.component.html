@@ -1,6 +1,16 @@
 <div class="center">
     <div class="mat-display-2">Contacts</div>
 
+    <mat-form-field appearance="fill">
+        <mat-label>Filter By Country</mat-label>
+        <mat-select (selectionChange)="filterContactsByCountry($event.value)" >
+            <mat-option *ngFor="let country of countries" 
+            [value]="country.id">
+            {{ country.country }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
     <table mat-table [dataSource]="contacts" class="mat-elevation-z8">
         <ng-container matColumnDef="Name">
             <th mat-header-cell *matHeaderCellDef> Name </th>

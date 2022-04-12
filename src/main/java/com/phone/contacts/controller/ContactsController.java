@@ -25,8 +25,8 @@ public class ContactsController {
         return ResponseEntity.ok(contactsService.getCustomerContacts(pageable));
     }
 
-    @GetMapping("/filter")
-    public ResponseEntity<Page<ContactDto>> filterContacts(@PathVariable("country") String country, @PageableDefault Pageable pageable){
-        return ResponseEntity.ok()
+    @GetMapping("/filter/{countryId}")
+    public ResponseEntity<Page<ContactDto>> filterContacts(@PathVariable("countryId") Integer countryId, @PageableDefault Pageable pageable){
+        return ResponseEntity.ok(contactsService.filterByCountry(countryId,pageable));
     }
 }

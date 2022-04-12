@@ -15,6 +15,8 @@ public class Country {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    private String countryCode;
+
     private String country;
 
     private String contactRegex;
