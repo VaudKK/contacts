@@ -17,8 +17,6 @@ public class Country {
 
     private String country;
 
-    private String code;
-
     private String contactRegex;
 
 }

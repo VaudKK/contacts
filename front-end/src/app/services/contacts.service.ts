@@ -8,10 +8,13 @@ import { Observable } from 'rxjs';
 export class ContactsService {
 
   private getContactsUrl = "http://localhost:9000/contacts"
+  private requestUrl: string = ""
 
   constructor(private http: HttpClient) { }
 
-  getClients(): Observable<any>{
-    return this.http.get<any>(this.getContactsUrl);
+  getClients(pageIndex:number,pageSize:number): Observable<any>{
+    this.requestUrl= this.getContactsUrl + "?page=" + pageIndex
+     + "&size=" + pageSize;
+    return this.http.get<any>(this.requestUrl);
   }
 }

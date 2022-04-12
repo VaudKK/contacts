@@ -1,5 +1,6 @@
 <div class="center">
-    <div><h3>Contacts</h3></div>
+    <div class="mat-display-2">Contacts</div>
+
     <table mat-table [dataSource]="contacts" class="mat-elevation-z8">
         <ng-container matColumnDef="Name">
             <th mat-header-cell *matHeaderCellDef> Name </th>
@@ -14,9 +15,10 @@
         <tr mat-row *matRowDef="let row; columns: displayColumns;">
     </table>
     <mat-paginator [length]="totalElements"
-              [pageSize]="10"
-              [pageSizeOptions]="[5, 10, 20]"
-              aria-label="Select page">
+                [pageSize]="10"
+                [pageSizeOptions]="[5, 10]"
+                aria-label="Select page" class="mat-elevation-z8">
     </mat-paginator>
+
 
 </div>
