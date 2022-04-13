@@ -4,6 +4,7 @@ Simple application that categorizes phone numbers
 ### How to run the project
 
 #### Prerequisites
+* Ensure you have java 11 installed on your machine
 * Ensure you have maven installed on your machine
 * Ensure you have docker installed on your machine
 * Ensure no processes on your machine are running on port 9000 or 80
