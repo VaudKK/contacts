@@ -1,4 +1,4 @@
-# contacts
+# Contacts
 Simple application that categorizes phone numbers
 
 ### How to run the project
