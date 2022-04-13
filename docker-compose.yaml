@@ -1,0 +1,20 @@
+version: '2'
+services:
+  contact-backend:
+    container_name: contacts-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: contacts-app:latest
+    ports:
+      - "9000:9000"
+  contact-frontend:
+    container_name: contacts-frontend
+    build:
+      context: ./front-end
+      dockerfile: Dockerfile
+    image: contacts-frontend:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - contact-backend
