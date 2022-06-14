@@ -1,5 +1,5 @@
 # Contacts
-Simple application that categorizes phone numbers
+Simple Practice application that categorizes phone numbers using spring and angular
 
 ### How to run the project
 
